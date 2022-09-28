@@ -1,0 +1,14 @@
+TODO for chemical-mime-data
+---------------------------
+
+* Coordinate a transition from chemical/* to probably application/* or similar
+  to get rid of these unregistered types.
+
+* choose if we want to use rsvg or convert - that makes the difference in the
+  size (images created from SVG)
+
+  http://people.debian.org/~lucas/logs/2008/01/22/bdfh/debdiffs/chemical-mime-data.debdiff
+  http://people.debian.org/~lucas/logs/2008/01/22/bdfh/logs/chemical-mime-data_0.1.94-3_sid32.buildlog
+  http://people.debian.org/~lucas/logs/2008/01/22/bdfh/logs/chemical-mime-data_0.1.94-3_sid32-bdfh.buildlog
+
+  Q: Which produces the better output?

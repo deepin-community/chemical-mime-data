@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+#export DH_VERBOSE=1
+
+PACKAGE = chemical-mime-data
+
+%:
+	dh $@ --parallel
+
+override_dh_autoreconf:
+	intltoolize -c -f
+	dh_autoreconf
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+	    --disable-nls \
+	    --without-gnome-mime \
+	    --without-kde-mime \
+	    --disable-update-database --disable-convert \
+	    RSVG="/usr/bin/rsvg-convert" \
+	    XMLLINT_FLAGS="--nonet" \
+	    XSLTPROC_FLAGS="--nonet"
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS
+
+override_dh_clean:
+	dh_clean intltool-*.in po/Makefile.in.in

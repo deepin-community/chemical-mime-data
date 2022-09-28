@@ -1,0 +1,4 @@
+# See uscan(1) for format
+
+version=3
+https://github.com/dleidert/chemical-mime/releases .*/release_(\d+)_(\d+)_(\d+)\.tar\.(?:bz2|gz)

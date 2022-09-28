@@ -1,0 +1,17 @@
+chemicalmime for Debian
+-----------------------
+
+This package is under development. If you know a general(*) chemical MIME type,
+which is not supported by this package but should be, tell us. If you find
+a conflict between the chemical-mime-data package and the freedesktop.org
+shared MIME-info database, KDE mimelnk or GNOME mime-info system, tell us.
+If you can refine the specifications in
+/usr/share/mime/packages/chemical-mime-data.xml, tell us.
+
+(*) No specific application/* MIME types. They should be handled/installed by the
+application itself.
+
+More information is available at https://github.com/dleidert/chemical-mime.
+
+ -- Daniel Leidert (dale) <daniel.leidert@wgdd.de>  Tue,  2 May 2006 22:56:49 +0200
+

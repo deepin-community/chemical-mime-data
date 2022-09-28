@@ -1,0 +1,16 @@
+Author: Stefano Rivera <stefanor@debian.org>
+Acked-by: Daniel Leidert <dleidert@debian.org>
+Description: Use rsvg-convert, which has a different syntax.
+Bug-Debian: http://bugs.debian.org/661326
+
+--- a/icons/hicolor/Makefile.am
++++ b/icons/hicolor/Makefile.am
+@@ -24,7 +24,7 @@
+ 	gzip $< -c > $@
+ 	for size in $(icon_sizes) ; do \
+ 		if test "x$(RSVG)" != "x" ; then \
+-			$(RSVG) -w $${size} -h $${size} -f png $< $*_$${size}.png ; \
++			$(RSVG) -w $${size} -h $${size} -f png $< -o $*_$${size}.png ; \
+ 		else \
+ 			$(CONVERT) $< -resize $${size}x$${size} $*_$${size}.png ; \
+ 		fi \
